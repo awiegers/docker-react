@@ -7,6 +7,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx
+EXPOSE 80
 # for aws  use this:
 #COPY --from=0 /app/build /usr/share/nginx/html
 # and change line one as well.
