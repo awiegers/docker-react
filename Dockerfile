@@ -7,6 +7,7 @@ COPY . .
 RUN npm run build
 
 FROM nginx
+# beanstalk needs this to specify the port mapping.
 EXPOSE 80
 # for aws  use this:
 COPY --from=0 /app/build /usr/share/nginx/html
